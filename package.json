@@ -1,15 +1,19 @@
 {
   "name": "portafolio-1",
   "private": true,
+  "homepage": "http:/yz-salas.github.io/AppSalas",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "motion": "^11.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
