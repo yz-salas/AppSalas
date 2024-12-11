@@ -1,4 +1,4 @@
-import { HeaderAnimation } from '../../MotionAnimation/AppMotion';
+import { HeaderAnimation } from '../../../MotionAnimation/AppMotion';
 
 const Header = () => {
 	const code = '<HI/>';

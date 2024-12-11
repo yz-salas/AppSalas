@@ -1,7 +1,7 @@
 import React from 'react';
 import CartProyect from './proyects/CartPoyects';
 import Imgcart from './proyects/Imgcart';
-import { AppMotion, HeaderAnimation } from '../MotionAnimation/AppMotion';
+import { AppMotion, HeaderAnimation } from '../../MotionAnimation/AppMotion';
 
 const Proyects = () => {
 	return (

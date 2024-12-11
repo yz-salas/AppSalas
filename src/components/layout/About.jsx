@@ -4,7 +4,7 @@ import imgAbout2 from '../../assets/about2.png';
 import Technologies from './about/technologies';
 import Service from './about/Service';
 import { Link } from 'react-router-dom';
-import { AppMotion, HeaderAnimation } from '../MotionAnimation/AppMotion';
+import { AppMotion, HeaderAnimation } from '../../MotionAnimation/AppMotion';
 
 const About = () => {
 	return (
@@ -40,14 +40,14 @@ const About = () => {
 								{/* Info */}
 								<div className="flex flex-col gap-6 lg:gap-10">
 									<p className="py-4 flex flex-col gap-5 text-base md:text-lg lg:text-[16px] leading-relaxed lg:w-[80%]">
-										<div>Hello, my name is Adiel Salas, I am 21 years old and I am an self-taught web developer.</div>
-										<div>
+										<span>Hello, my name is Adiel Salas, I am 21 years old and I am an self-taught web developer.</span>
+										<span>
 											Since my childhood I have loved the world of digital And since I was little I have been very creative, applying myself to
 											drawing, photography, and enjoying nature and travel, and the right area to combine all these skills that I enjoy. My vision is
 											to provide companies with modern web solutions that visually please users.
-										</div>
-										<div>I believe in combining clean design and solid functionality to create seamless experiences.</div>
-										<div>I am passionate about turning ideas into reality, one line of code at a time.</div>
+										</span>
+										<span>I believe in combining clean design and solid functionality to create seamless experiences.</span>
+										<span>I am passionate about turning ideas into reality, one line of code at a time.</span>
 									</p>
 
 									{/* Personal Details */}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Router from './routes/routers';
 import Primarybuttom from './components/ui/Primarybuttom';
-import { NavbarAnimation, LeftToRightAnimation } from './components/MotionAnimation/AppMotion';
+import { NavbarAnimation, LeftToRightAnimation } from './MotionAnimation/AppMotion';
 
 function App() {
 	/* controladores del navbar */
@@ -19,10 +19,10 @@ function App() {
 
 	/* controladores del navbar */
 	const links = [
-		{ url: '/', name: 'HOME' },
-		{ url: '/aboutme', name: 'ABOUT ME' },
-		{ url: '/myproyects', name: 'PORTAFOLIO' },
-		{ url: '/contactme', name: 'CONTACT' },
+		{ url: '/AppSalas/', name: 'HOME' },
+		{ url: '/AppSalas/aboutme', name: 'ABOUT ME' },
+		{ url: '/AppSalas/myproyects', name: 'PORTAFOLIO' },
+		{ url: '/AppSalas/contactme', name: 'CONTACT' },
 	];
 
 	return (
