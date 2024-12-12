@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import img1 from '@assets/imgPortafolio/IMG-20241208-WA0001.jpg';
 import img2 from '@assets/imgPortafolio/IMG-20241208-WA0002.jpg';
 import img3 from '@assets/imgPortafolio/IMG-20241208-WA0003.jpg';
@@ -75,7 +76,7 @@ const Imgcart = () => {
 			<div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
 				{imgs.map((img, index) => (
 					<div key={index} className="break-inside-avoid rounded-lg overflow-hidden shadow-lg cursor-pointer" onClick={() => openModal(img.src)}>
-						<img
+						<LazyLoadImage
 							src={img.src}
 							alt={img.alt}
 							className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"

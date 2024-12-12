@@ -5,6 +5,7 @@ import P1imgOne from '@assets/imgProyects/delfines/portada.png';
 import P1imgTwo from '@assets/imgProyects/delfines/extra.png';
 import P2imgOne from '@assets/imgProyects/aosCorporation/portada.png';
 import P2imgTwo from '@assets/imgProyects/aosCorporation/extra.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const CartProyect = () => {
 	// Estado para manejar qué proyecto está activo
@@ -52,7 +53,7 @@ const CartProyect = () => {
 								<div className="flex flex-col lg:flex-row gap-4">
 									{/* Animación y tamaño reducido de las imágenes */}
 									<div className="flex-shrink-0 transform transition-all duration-500 ease-in-out hover:scale-105">
-										<img src={proyect.img1} alt={`${proyect.name} primary`} className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg shadow-lg" />
+										<LazyLoadImage src={proyect.img1} alt={`${proyect.name} primary`} className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg shadow-lg" />
 									</div>
 									<div className="flex flex-col sm:ml-4">
 										<p className="mb-4 text-gray-400">{proyect.descripcion}</p>

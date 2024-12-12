@@ -5,6 +5,7 @@ import Technologies from './about/technologies';
 import Service from './about/Service';
 import { Link } from 'react-router-dom';
 import { AppMotion, HeaderAnimation } from '../../MotionAnimation/AppMotion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const About = () => {
 	return (
@@ -27,9 +28,9 @@ const About = () => {
 								<div className="border-b-2 border-zinc-900">
 									{/* Image */}
 									<div className="flex flex-col lg:flex-row gap-5 justify-center items-center lg:justify-start lg:items-start">
-										<img src={imgAbout} className="w-[300px] md:w-[450px] lg:w-[400px] shadow-lg " alt="Zadiel Salas" />
+										<LazyLoadImage src={imgAbout} className="w-[300px] md:w-[450px] lg:w-[400px] shadow-lg " alt="Zadiel Salas" />
 
-										<img src={imgAbout2} className="w-[300px] md:w-[450px] lg:w-[550px] shadow-lg " alt="Zadiel Salas" />
+										<LazyLoadImage src={imgAbout2} className="w-[300px] md:w-[450px] lg:w-[550px] shadow-lg " alt="Zadiel Salas" />
 									</div>
 									<div className="border-gray-400 broder-b-2 py-10">
 										<p className="text-3xl font-light text-red-700">Zadiel Salas</p>
