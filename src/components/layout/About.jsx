@@ -1,6 +1,7 @@
 import React from 'react';
 import imgAbout from '../../assets/about.jpg';
 import imgAbout2 from '../../assets/about2.jpg';
+import cv from '../../../public/cv.jpg';
 import Technologies from './about/technologies';
 import Service from './about/Service';
 import { Link } from 'react-router-dom';
@@ -91,9 +92,9 @@ const About = () => {
 
 									{/* Button */}
 									<div>
-										<Link to="/resume" className="bg-red-700 text-white py-3 px-6 hover:bg-red-800 transition-colors">
+										<a href={cv} download className="bg-red-700 text-white py-3 px-6 hover:bg-red-800 transition-colors">
 											Download CV
-										</Link>
+										</a>
 									</div>
 								</div>
 							</div>
