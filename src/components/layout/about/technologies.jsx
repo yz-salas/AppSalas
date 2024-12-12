@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Technologies = () => {
 	return (
@@ -14,10 +15,50 @@ const Technologies = () => {
 				<div className="text-[25px] lg:text-[50px] flex justify-center items-center">
 					<div className="lg:p-1">
 						<p>
-							HTML <span className="text-red-700">/</span> CSS <span className="text-red-700">/</span> JAVASCRIPT{' '}
-							<span className="text-red-700">/</span> TAILWIND.CSS <span className="text-red-700">/</span> PHP <span className="text-red-700">/</span>{' '}
-							REACT.JS <span className="text-red-700">/</span> REACT-ROUTER-DOM <span className="text-red-700">/</span> GIT{' '}
-							<span className="text-red-700">/</span> GITHUB
+							<Link className="hover:text-red-700" target="blanck" to="https://developer.mozilla.org/es/docs/Web/HTML">
+								{' '}
+								HTML{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://developer.mozilla.org/es/docs/Web/CSS">
+								{' '}
+								CSS{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://developer.mozilla.org/es/docs/	Web/JavaScript">
+								{' '}
+								JAVASCRIPT{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://tailwindcss.com/">
+								{' '}
+								TAILWIND.CSS{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://www.php.net/">
+								{' '}
+								PHP{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://react.dev/">
+								{' '}
+								REACT.JS{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://reactrouter.com/">
+								{' '}
+								REACT-ROUTER-DOM{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://git-scm.com/">
+								{' '}
+								GIT{' '}
+							</Link>
+							<span className="text-red-700">/</span>
+							<Link className="hover:text-red-700" target="blanck" to="https://github.com/">
+								{' '}
+								GITHUB{' '}
+							</Link>
 						</p>
 					</div>
 				</div>
