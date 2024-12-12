@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaPhp, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 import { SiTailwindcss, SiMysql } from 'react-icons/si';
-import P1imgOne from '@assets/imgProyects/delfines/portada.png';
+import P1imgOne from '@assets/imgProyects/delfines/portada.jpg';
 import P1imgTwo from '@assets/imgProyects/delfines/extra.png';
-import P2imgOne from '@assets/imgProyects/aosCorporation/portada.png';
+import P2imgOne from '@assets/imgProyects/aosCorporation/portada.jpg';
 import P2imgTwo from '@assets/imgProyects/aosCorporation/extra.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 

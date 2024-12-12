@@ -1,6 +1,6 @@
 import React from 'react';
 import imgAbout from '../../assets/about.jpg';
-import imgAbout2 from '../../assets/about2.png';
+import imgAbout2 from '../../assets/about2.jpg';
 import Technologies from './about/technologies';
 import Service from './about/Service';
 import { Link } from 'react-router-dom';
