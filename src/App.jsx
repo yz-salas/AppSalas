@@ -29,7 +29,7 @@ function App() {
 		<>
 			<div className="flex h-screen text-black relative">
 				{/* Botón para pantallas pequeñas */}
-				<button className="fixed top-5 left-5 z-50 text-white p-3 rounded-md lg:hidden" onClick={toggleMenu}>
+				<button className="fixed top-5 left-5 z-50 bg-black text-white p-3 rounded-md lg:hidden" onClick={toggleMenu}>
 					<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
@@ -38,14 +38,14 @@ function App() {
 				<NavbarAnimation>
 					{/* Sidebar */}
 					<aside
-						className={`fixed top-0 left-0 h-screen w-64 bg-black shadow-lg flex flex-col items-start p-8 transform transition-transform duration-300 ${
+						className={`fixed top-0 left-0 h-screen w-64 bg-black shadow-lg flex flex-col items-start transform transition-transform duration-300 ${
 							isOpen ? 'translate-x-0' : '-translate-x-full'
 						} lg:translate-x-0 lg:flex`}
 					>
 						{/* Menú centrado verticalmente */}
 						<div className="flex-grow flex flex-col justify-center w-full items-center space-y-6">
 							{/* Logo */}
-							<div className="text-3xl font-light mb-8 w-[55%] text-white">
+							<div className="text-2xl font-light mb-8 w-[55%] text-white flex justify-center lg:justify-start lg:pl-5">
 								<span className="text-red-700">ZADIEL</span>
 							</div>
 							<nav className="flex flex-col gap-2 ">
@@ -56,9 +56,9 @@ function App() {
 								))}
 							</nav>
 							{/* Footer */}
-							<footer className="mt-auto text-sm py-10 pl-7 text-gray-500">
-								<p>© 2022 Tokyo</p>
-								<p>Created by Marketify</p>
+							<footer className="mt-auto text-[9px] lg:text-sm py-10 text-gray-500 pl-2">
+								<p>© 2024 Republica</p>
+								<p>Creating dreams</p>
 							</footer>
 						</div>
 					</aside>

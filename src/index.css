@@ -6,7 +6,7 @@
 /* Para ocultar la barra de desplazamiento */
 ::-webkit-scrollbar {
 	display: none;
-}
+}	
 
 /* Esto también oculta la barra de desplazamiento pero mantiene el desplazamiento */
 html {

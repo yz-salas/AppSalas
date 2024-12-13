@@ -34,7 +34,7 @@ const Service = () => {
 					My Service<span className="text-white">.</span>
 				</h1>
 			</div>
-			<div className="h-full w-full font-light flex flex-col gap-8 px-6 py-10 md:px-7">
+			<div className="h-full w-full font-light flex flex-col gap-8 py-10 lg:px-8">
 				<div className="space-y-4">
 					{faqData.map((item, index) => (
 						<div

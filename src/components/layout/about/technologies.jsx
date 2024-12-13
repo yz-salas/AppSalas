@@ -63,10 +63,12 @@ const Technologies = () => {
 					</div>
 				</div>
 				<div className="lg:px-2 w-full lg:w-[70%] text-[20px]">
-					<p>
-						I have solid knowledge in various web development technologies, which allow us to create efficient and modern solutions. From using design
-						languages ​​like HTML and CSS to implementing advanced frameworks like React.js and Tailwind CSS, I'm ready to take on any development
-						challenge.
+					<p className='flex flex-col gap-5'>
+						<span>I have solid knowledge in various web development technologies, which allow us to create efficient and modern solutions.</span>
+						<span>
+							From using design languages ​​like HTML and CSS to implementing advanced frameworks like React.js and Tailwind CSS, I'm ready to take on
+							any development challenge.
+						</span>
 					</p>
 				</div>
 			</div>

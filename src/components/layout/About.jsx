@@ -4,7 +4,6 @@ import imgAbout2 from '../../assets/about2.jpg';
 import cv from '../../../public/cv.jpg';
 import Technologies from './about/technologies';
 import Service from './about/Service';
-import { Link } from 'react-router-dom';
 import { AppMotion, HeaderAnimation } from '../../MotionAnimation/AppMotion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
