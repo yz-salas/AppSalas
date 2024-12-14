@@ -55,10 +55,7 @@ const About = () => {
 									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 border-t-2 border-zinc-900 border-b-2 border-zinc-900">
 										<div>
 											<p>
-												<strong>Birthday:</strong> 10.02.1995
-											</p>
-											<p>
-												<strong>Age:</strong> 29
+												<strong>Age:</strong> 21
 											</p>
 											<p>
 												<strong>Address:</strong> Santiago De Los Caballeros
