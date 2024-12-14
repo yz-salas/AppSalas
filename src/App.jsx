@@ -48,7 +48,7 @@ function App() {
 							<div className="text-2xl font-light mb-8 w-[55%] text-white flex justify-center lg:justify-start lg:pl-5">
 								<span className="text-red-700">ZADIEL</span>
 							</div>
-							<nav className="flex flex-col gap-2 ">
+							<nav className="flex flex-col gap-2 pl-3 lg:pl-0">
 								{links.map((link, index) => (
 									<LeftToRightAnimation key={link.url} delay={index * 0.2}>
 										<Primarybuttom url={link.url} name={link.name} onClick={handleLinkClick} />

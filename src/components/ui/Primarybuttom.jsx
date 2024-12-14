@@ -12,7 +12,7 @@ const Primarybuttom = ({ url, name, onClick }) => {
 				<span className="relative flex items-center">
 					{/* Letras y texto */}
 					<span className="flex items-center transition-all duration-300 hover">
-						<span className="transition-colors font-light text-[13px] lg:text-[17px] duration-300 group-hover:text-red-900 flex text-center">
+						<span className="transition-colors font-light text-[15px] lg:text-[17px] duration-300 group-hover:text-red-900 flex text-center">
 							{name}
 						</span>
 					</span>
