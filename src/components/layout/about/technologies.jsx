@@ -7,12 +7,12 @@ const Technologies = () => {
 			<div className="h-full w-full flex flex-col gap-8 lg:px-6">
 				{/* About Title */}
 				<div className="mb-12 lg:pl-1">
-					<h1 className="text-4xl md:text-5xl lg:text-5xl text-red-700">
+					<h1 className="text-3xl text-red-700">
 						My Technologies<span className="text-white">.</span>
 					</h1>
 				</div>
 
-				<div className="text-[25px] lg:text-[50px] flex justify-center items-center">
+				<div className="text-[25px] lg:text-[30px] flex justify-center items-center">
 					<div className="lg:p-1">
 						<p>
 							<Link className="hover:text-red-700" target="blanck" to="https://developer.mozilla.org/es/docs/Web/HTML">
@@ -63,7 +63,7 @@ const Technologies = () => {
 					</div>
 				</div>
 				<div className="lg:px-2 w-full lg:w-[70%] text-[20px]">
-					<p className='flex flex-col gap-5'>
+					<p className="flex flex-col gap-5">
 						<span>I have solid knowledge in various web development technologies, which allow us to create efficient and modern solutions.</span>
 						<span>
 							From using design languages ​​like HTML and CSS to implementing advanced frameworks like React.js and Tailwind CSS, I'm ready to take on

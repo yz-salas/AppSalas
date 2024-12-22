@@ -15,10 +15,10 @@ const About = () => {
 			<HeaderAnimation>
 				<div className="font-light lg:px-10 py-20" id="header">
 					<section className="bg-zinc-950 text-white min-h-screen w-full flex flex-col items-center justify-center">
-						<div className="">
+						<div>
 							{/* About Title */}
 							<div className="mb-12 lg:pl-8">
-								<h1 className="text-5xl font-light py-12 text-red-700">
+								<h1 className="text-3xl font-light py-12 text-red-700">
 									About Me<span className="text-white">.</span>
 								</h1>
 							</div>
@@ -28,9 +28,7 @@ const About = () => {
 								<div className="border-b-2 border-zinc-900">
 									{/* Image */}
 									<div className="flex flex-col lg:flex-row gap-5 justify-center items-center lg:justify-start lg:items-start">
-										<LazyLoadImage src={imgAbout} className="w-[300px] md:w-[450px] lg:w-[400px] shadow-lg " alt="Zadiel Salas" />
-
-										<LazyLoadImage src={imgAbout2} className="w-[300px] md:w-[450px] lg:w-[550px] shadow-lg " alt="Zadiel Salas" />
+										<LazyLoadImage src={imgAbout} className="w-[300px] md:w-[450px] lg:w-[600px] " alt="Zadiel Salas" />
 									</div>
 									<div className="border-gray-400 broder-b-2 py-10">
 										<p className="text-3xl font-light text-red-700">Zadiel Salas</p>
@@ -52,7 +50,7 @@ const About = () => {
 									</p>
 
 									{/* Personal Details */}
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 border-t-2 border-zinc-900 border-b-2 border-zinc-900">
+									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 border-t-2 border-zinc-900 border-b-2 ">
 										<div>
 											<p>
 												<strong>Age:</strong> 21
@@ -88,7 +86,7 @@ const About = () => {
 
 									{/* Button */}
 									<div>
-										<a href={cv} download className="bg-red-700 text-white py-3 px-6 hover:bg-red-800 transition-colors">
+										<a href={cv} download className="border border-red-700 text-white py-3 px-6 hover:bg-red-800 transition-colors text-[15px]">
 											Download CV
 										</a>
 									</div>

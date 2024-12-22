@@ -30,7 +30,7 @@ const Service = () => {
 	return (
 		<section className="bg-zinc-950 lg:pt-20 text-white min-h-[70vh] w-full flex flex-col justify-center">
 			<div className="mb-12 lg:pl-1">
-				<h1 className="text-5xl text-red-700 lg:px-6">
+				<h1 className="text-3xl text-red-700 lg:px-6">
 					My Service<span className="text-white">.</span>
 				</h1>
 			</div>
