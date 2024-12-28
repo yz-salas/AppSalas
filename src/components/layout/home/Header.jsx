@@ -1,32 +1,35 @@
 import { HeaderAnimation } from '../../../MotionAnimation/AppMotion';
-import bg from '../../../assets/about2.jpg';
-import Buttomsecundary from '../../ui/Buttomsecundary';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import ButtomCV from '../../ui/Buttomsecundary';
+import cv from '../../../../public/cv.jpg';
 const Header = () => {
-	const code = '<HI/>';
 	return (
 		<HeaderAnimation>
-			<header className="py-20 flex justify-center items-center min-h-screen">
-				<div className="overflow-hidden">
-					<div className="text-3xl min-h-[50vh] flex-col text-white flex gap-8 justify-center items-center lg:text-[50px] md:text-6xl">
-						<div className="flex flex-col justify-center items-center">
-							<h1 className="font-light text-center lg:text-left">
-								<span>
-									<span className="text-red-700">{code}</span> <span>I'm</span> Zadiel<span className="text-red-700">.</span>
-								</span>
-							</h1>
-							<h1 className="font-light text-center lg:text-left">
-								<span>And </span>
-								<span>I'm </span>
-								Developer <span className="text-red-700">Web</span>.
-							</h1>
+			<header className=" md:container lg:container w-full flex items-center justify-center lg:justify-start h-screen">
+				<div className="min-h-full w-[80%] flex gap-10 flex-col items-center justify-center text-white">
+					<div className="w-full">
+						<h1 className="text-[40px] md:text-[70px] lg:text-[70px] w-full font-bolddec">
+							Yony Zadiel Salas<span className="text-lime-600">.</span>
+						</h1>
+						<hr className="w-full h-[1px] border-0 bg-zinc-800" />
+					</div>
+					<div className="w-full flex justify-center items-center font-flory">
+						<div className="flex w-full items-center gap-10">
+							<h3 className=" text-[30px] font-light">Web Developer</h3>
+							<div className="flex gap-5 text-[30px]">
+								<span className="text-lime-600"> / </span>
+								<h3>2024</h3>
+							</div>
+							<div className="flex gap-5 font-bolddec text-[30px]">
+								<a href={cv} download className={`py-3 px-6 text-lime-600 transition-colors text-[15px]`}>
+									CV ⭢
+								</a>
+							</div>
 						</div>
-						<Buttomsecundary name="Know Me" />
 					</div>
 				</div>
 			</header>
 		</HeaderAnimation>
 	);
 };
+
 export default Header;

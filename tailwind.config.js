@@ -4,11 +4,12 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				letter: ['IBM Plex Mono", monospace'],
+				bolddec: ['Rubik Mono One'],
+				flory: ['Reenie Beanie'],
 			},
 			container: {
 				center: true, // Asegura que siempre esté centrado
-				padding: '2rem', // Padding adicional
+				padding: '8rem', // Padding adicional
 			},
 		},
 	},

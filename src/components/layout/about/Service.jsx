@@ -30,7 +30,7 @@ const Service = () => {
 	return (
 		<section className="bg-zinc-950 lg:pt-20 text-white min-h-[70vh] w-full flex flex-col justify-center">
 			<div className="mb-12 lg:pl-1">
-				<h1 className="text-3xl text-red-700 lg:px-6">
+				<h1 className="text-3xl text-blue-700 lg:px-6">
 					My Service<span className="text-white">.</span>
 				</h1>
 			</div>
@@ -39,14 +39,14 @@ const Service = () => {
 					{faqData.map((item, index) => (
 						<div
 							key={index}
-							className={`border-b ${index === faqData.length - 1 ? 'border-transparent' : 'border-gray-700 hover:border-red-700'} pb-4`}
+							className={`border-b ${index === faqData.length - 1 ? 'border-transparent' : 'border-gray-700 hover:border-blue-700'} pb-4`}
 						>
 							<button
 								onClick={() => toggleQuestion(index)}
 								className="w-full text-left flex justify-between items-center text-white text-[20px] lg:text-[30px] font-light focus:outline-none"
 							>
 								{item.question}
-								<span className={`text-red-700 text-2xl font-bold`}>{activeIndex === index ? '−' : '+'}</span>
+								<span className={`text-blue-700 text-2xl font-bold`}>{activeIndex === index ? '−' : '+'}</span>
 							</button>
 							{activeIndex === index && <p className="text-gray-400 mt-2">{item.answer}</p>}
 						</div>

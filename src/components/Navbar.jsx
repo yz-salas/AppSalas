@@ -1,50 +1,89 @@
 import React, { useState } from 'react';
-import Primarybuttom from './ui/Primarybuttom';
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
-	const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-	const toggleMenu = () => {
-		setIsOpen(!isOpen);
-	};
-
-	// Función para cerrar el menú al hacer clic en un enlace
-	const handleLinkClick = () => {
-		setIsOpen(false);
+	const toggleSidebar = () => {
+		setIsSidebarOpen(!isSidebarOpen);
 	};
 
 	return (
 		<div className="relative">
-			{/* Botón de menú: visible solo en pantallas pequeñas */}
-			<button className="fixed top-5 left-5 z-50 text-white bg-zinc-950 p-3 rounded-md lg:hidden" onClick={toggleMenu}>
-				<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-				</svg>
+			{/* Hamburger Button */}
+			<button
+				onClick={toggleSidebar}
+				className="fixed top-4 left-4 z-50 flex ml-[40px] md:ml-[90px] lg:ml-[115px] mt-[20px] flex-col items-start space-y-1 group gap-5"
+			>
+				{/* Top Line */}
+				<span className="w-[60px] h-[2px] bg-white rounded-lg group-hover:bg-lime-600 transition-all"></span>
+				{/* Bottom Line */}
+				<span className="w-[40px] h-[3px] bg-white rounded-lg group-hover:bg-lime-600 transition-all"></span>
 			</button>
 
 			{/* Sidebar */}
 			<div
-				className={`fixed top-0 left-0 h-full bg-zinc-950 text-white shadow-lg transition-transform transform lg:w-64 w-3/4 ${
-					isOpen ? 'translate-x-0' : '-translate-x-full'
-				} lg:translate-x-0`}
+				className={`fixed top-0 left-0 h-full w-full bg-zinc-950 shadow-md transition-transform transform ${
+					isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+				} z-50`}
 			>
-				{/* Botón para cerrar: visible solo en pantallas pequeñas */}
-				<button className="absolute top-5 right-5 text-white p-2 lg:hidden" onClick={toggleMenu}>
-					<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-					</svg>
-				</button>
-
-				{/* Contenido del sidebar */}
-				<nav className="flex flex-col items-center justify-start h-full space-y-8 pt-20">
-					<Primarybuttom url="/" name="HOME" onClick={handleLinkClick} />
-					<Primarybuttom url="/aboutme" name="ABOUT ME" onClick={handleLinkClick} />
-					<Primarybuttom url="/myproyects" name="PROYECTS" onClick={handleLinkClick} />
-					<Primarybuttom url="/contactme" name="CONTACT" onClick={handleLinkClick} />
-				</nav>
+				<div className="lg:container flex flex-col w-full h-full px-10 gap-10 lg:gap-0 ">
+					<div className="w-full flex justify-end mt-10">
+						<button onClick={toggleSidebar} className="text-zinc-800 font-bolddec text-[60px] hover:text-lime-600">
+							✕
+						</button>
+					</div>
+					{/* Sidebar Content */}
+					<div className="w-full lg:w-[70%]">
+						<nav className="flex flex-col space-y-4 h-full w-full justify-center gap-5">
+							<div className="w-full h-[50px] flex items-center">
+								<Link to="*" className="font-flory text-lime-600 text-[35px] md:text-[60px] lg:text-[70px]" onClick={toggleSidebar}>
+									YZS
+								</Link>
+							</div>
+							<hr className="w-full h-[1px] border-0 bg-zinc-800" />
+							<div className="flex flex-col gap-3">
+								<Link
+									to="/AppSalas/"
+									onClick={toggleSidebar}
+									className="text-zinc-800 hover:text-lime-600 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] "
+								>
+									Home
+								</Link>
+								<Link
+									to="/AppSalas/aboutme/"
+									onClick={toggleSidebar}
+									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 "
+								>
+									About Me
+								</Link>
+								<Link
+									to="/AppSalas/myproyects"
+									onClick={toggleSidebar}
+									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600"
+								>
+									Portafolio
+								</Link>
+								<Link
+									to="/AppSalas/contactme"
+									onClick={toggleSidebar}
+									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600"
+								>
+									Contact
+								</Link>
+							</div>
+						</nav>
+					</div>
+					<div className="w-[30%]">
+						<div className=""></div>
+					</div>
+				</div>
 			</div>
+
+			{/* Overlay */}
+			{isSidebarOpen && <div onClick={toggleSidebar} className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>}
 		</div>
 	);
 };
 
-export default Sidebar;
+export default Navbar;

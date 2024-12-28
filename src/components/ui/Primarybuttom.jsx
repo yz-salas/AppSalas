@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Primarybuttom = ({ url, name, onClick }) => {
+const Primarybuttom = ({ url, name, onClick, style}) => {
 	return (
 		<>
 			<Link
 				to={url}
 				onClick={onClick} // Agregamos el evento onClick
-				className="group relative text-red-700 duration-700 flex lg:justify-start items-center gap-5 w-[100%] lg:w-[100px]"
+				className={`group ${style} relative text-blue-700 flex justify-center items-center gap-5`}
 			>
 				<span className="relative flex items-center">
 					{/* Letras y texto */}
 					<span className="flex items-center transition-all duration-300 hover">
-						<span className="transition-colors font-light text-[15px] lg:text-[17px] duration-300 group-hover:text-red-900 flex text-center">
+						<span className="transition-colors font-light text-[15px] lg:text-[17px] duration-300 flex text-center">
 							{name}
 						</span>
 					</span>

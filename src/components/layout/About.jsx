@@ -1,102 +1,98 @@
 import React from 'react';
-import imgAbout from '../../assets/about.jpg';
-import imgAbout2 from '../../assets/about2.jpg';
-import cv from '../../../public/cv.jpg';
-import Technologies from './about/technologies';
-import Service from './about/Service';
-import { AppMotion, HeaderAnimation } from '../../MotionAnimation/AppMotion';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { HeaderAnimation, LeftToRightAnimation, RightToLeftAnimation, DragConstraints, PathDrawing } from '../../MotionAnimation/AppMotion';
+import Footer from './Footer';
 
 const About = () => {
 	return (
 		<>
-			<AppMotion />
-
 			<HeaderAnimation>
-				<div className="font-light lg:px-10 py-20" id="header">
-					<section className="bg-zinc-950 text-white min-h-screen w-full flex flex-col items-center justify-center">
-						<div>
-							{/* About Title */}
-							<div className="mb-12 lg:pl-8">
-								<h1 className="text-3xl font-light py-12 text-red-700">
-									About Me<span className="text-white">.</span>
-								</h1>
-							</div>
-
-							{/* Content Section */}
-							<div className="flex flex-col gap-10 lg:px-8">
-								<div className="border-b-2 border-zinc-900">
-									{/* Image */}
-									<div className="flex flex-col lg:flex-row gap-5 justify-center items-center lg:justify-start lg:items-start">
-										<LazyLoadImage src={imgAbout} className="w-[300px] md:w-[450px] lg:w-[600px] " alt="Zadiel Salas" />
-									</div>
-									<div className="border-gray-400 broder-b-2 py-10">
-										<p className="text-3xl font-light text-red-700">Zadiel Salas</p>
-										<p className="text-lg text-gray-400">Web Developer</p>
-									</div>
+				<div className=" py-20 flex flex-col" id="header">
+					<header className="lg:container relative overflow-hidden text-white min-h-[100vh] flex flex-col gap-10">
+						<div className="flex flex-col lg:flex-row w-full min-h-[30vh] items-center justify-center lg:justify-start">
+							<h1 className="text-[50px] lg:text-[70px] font-bolddec text-zinc-800">
+								About <span className="font-flory text-lime-600 text-[70px]">Me</span>
+							</h1>
+						</div>
+						<hr className="w-full h-[1px] border-0 bg-zinc-800" />
+						<div className="w-full flex justify-center items-center">
+							<div className=" flex flex-col lg:flex-row md:px-[85px] lg:p-0">
+								<div className="w-[100%]">
+									<h1 className=" font-flory text-[40px] w-full">
+										who am i <span className="text-lime-600">?</span>
+									</h1>
+									<span className="text-[30px] text-lime-600 p-5 h-[270px] w-full flex transition duration-300 flex-col justify-center items-center">
+										⭢
+									</span>
 								</div>
-
-								{/* Info */}
-								<div className="flex flex-col gap-6 lg:gap-10">
-									<p className="py-4 flex flex-col gap-5 text-base md:text-lg lg:text-[16px] leading-relaxed lg:w-[80%]">
-										<span>Hello, my name is Adiel Salas, I am 21 years old and I am an self-taught web developer.</span>
-										<span>
-											Since my childhood I have loved the world of digital And since I was little I have been very creative, applying myself to
-											drawing, photography, and enjoying nature and travel, and the right area to combine all these skills that I enjoy. My vision is
-											to provide companies with modern web solutions that visually please users.
+								<div className="w-[100%]">
+									<p className="py-4 flex flex-col gap-5 font-light md:text-lg lg:text-[18px] leading-relaxedvw-full">
+										<span>My name is Zadiel Salas, I am 21 years old and I am an self-taught web developer front-end.</span>
+										<span className="">
+											I have always loved the world of digital, and since I was little, I have been very creative, applying myself to drawing,
+											photography, and enjoying nature and travel. I found the right area to combine all these skills that I enjoy. My vision is to
+											provide companies with modern web solutions that visually please users.
 										</span>
 										<span>I believe in combining clean design and solid functionality to create seamless experiences.</span>
 										<span>I am passionate about turning ideas into reality, one line of code at a time.</span>
 									</p>
-
-									{/* Personal Details */}
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 border-t-2 border-zinc-900 border-b-2 ">
-										<div>
-											<p>
-												<strong>Age:</strong> 21
-											</p>
-											<p>
-												<strong>Address:</strong> Santiago De Los Caballeros
-											</p>
-											<p>
-												<strong>Email:</strong>{' '}
-												<a href="mailto:sadielsalas35@gmail.com" className="text-red-700 hover:underline">
-													sadielsalas35@gmail.com
-												</a>
-											</p>
-											<p>
-												<strong>Phone:</strong> +1 829-442-1503
-											</p>
-										</div>
-										<div>
-											<p>
-												<strong>Nationality:</strong> Dominican Republic
-											</p>
-											<p>
-												<strong>Study:</strong> Autodidacta
-											</p>
-											<p>
-												<strong>Degree:</strong> Bachelor
-											</p>
-											<p>
-												<strong>Interest:</strong> Coding and Tech
-											</p>
-										</div>
-									</div>
-
-									{/* Button */}
-									<div>
-										<a href={cv} download className="border border-red-700 text-white py-3 px-6 hover:bg-red-800 transition-colors text-[15px]">
-											Download CV
-										</a>
-									</div>
 								</div>
 							</div>
 						</div>
+					</header>
+
+					<section id="#about" className="lg:container text-white min-h-[100vh] w-full flex flex-col items-center justify-center ">
+						{/* Content Section */}
+						<div className="flex w-full items-center flex-col lg:flex-row">
+							<div className="flex flex-col lg:flex-row md:w-[50%] lg:w-[50%] min-h-[30vh] items-center justify-center lg:justify-start">
+								<h1 className="text-[50px] font-bolddec">
+									A little spend <span className="font-flory text-lime-600 text-[60px]">time</span>
+								</h1>
+							</div>
+							<div className="w-[70%] lg:w-[50%] flex gap-5 flex-col justify-center lg:justify-start">
+								<h1 className="font-flory text-[40px] w-full text-zinc-800 text-center lg:text-start">
+									My Free Time <span className="text-lime-600">!!!</span>
+								</h1>
+								<hr className="w-full h-[1px] border-0 bg-zinc-800" />
+							</div>
+						</div>
+						<div className="w-full flex justify-center lg:justify-end">
+							<span className="text-[30px] text-lime-600 p-5 h-[220px] w-[50%] flex transition duration-300 flex-col justify-center items-center">
+								⭢
+							</span>
+							<div className="w-[100%] md:w-[77%] lg:w-[49.9%]">
+								<p className="py-4 flex flex-col gap-5 font-light text-base md:text-lg lg:text-[18px] leading-relaxedvw-full">
+									<span>I am passionate about exploring and learning about technology, especially in the field of technical computing.</span>
+
+									<span>
+										I enjoy researching the latest innovations in hardware and software, analyzing the pros and cons of new components that come onto
+										the market.
+									</span>
+									<span>
+										For me, keeping up with these developments is not just a hobby, but a way to stay inspilime and up to date in an ever-changing
+										world.
+									</span>
+								</p>
+							</div>
+						</div>
 					</section>
-					<Service />
-					<Technologies />
+					<section id="#about" className="lg:container text-white min-h-[50vh] w-full flex flex-col justify-center items-center relative ">
+						{/* Content Section */}
+						<div className="flex text-center justify-center items-center w-full">
+							<h1 className="text-[70px] w-[60%] font-bolddec text-lime-600 flex border-b-2 border-zinc-800 justify-center items-center">Extra</h1>
+						</div>
+						{/* Descripción del contenido */}
+						<div className="w-[100%] md:w-[78%] lg:w-[80%]">
+							<p className="py-4 flex flex-col gap-5 font-light md:text-lg lg:text-[18px] leading-relaxed text-center">
+								<span>I have solid knowledge in various web development technologies, which allow us to create efficient and modern solutions.</span>
+								<span>
+									From using design languages like HTML and CSS to implementing advanced frameworks like React.js and Tailwind CSS, I'm ready to take
+									on any development challenge.
+								</span>
+							</p>
+						</div>
+					</section>
 				</div>
+				<Footer />
 			</HeaderAnimation>
 		</>
 	);
