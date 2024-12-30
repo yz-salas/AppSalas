@@ -21,12 +21,26 @@ const projects = [
 		url: 'https://delfinespark.com/src/main.php',
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Your Images',
 		subtitle:
 			'This small website shows my ability to consume apis and display its data on the screen, it is developed in html, css, javasctipt, tailwind.css, and react.js shows images of an API when you click a button, they are added 1 by 1 and all images are deleted when you touch the secondary button',
 		number: '03',
-		url: 'https://github.com/yz-salas/AppSalas',
+		url: 'https://github.com/yz-salas/App_image',
+	},
+	{
+		id: 5,
+		title: 'Weather App',
+		subtitle: 'Using a weather API, this website gives the exact weather in real time of cities in different countries.',
+		number: '04',
+		url: 'https://github.com/yz-salas/App_De_Clima',
+	},
+	{
+		id: 5,
+		title: 'Rick And Morty',
+		subtitle: 'By consuming an API, this website shows images of characters from the famous television show called Rick and Morty.',
+		number: '04',
+		url: 'https://github.com/yz-salas/app_personajes',
 	},
 ];
 
@@ -45,14 +59,15 @@ const Project = () => {
 					</div>
 					<div className="w-full flex py-[40px]">
 						<div className="flex items-center justify-center lg:justify-start lg:items-start w-full">
-							<div className="flex flex-wrap gap-[3px]">
+							<div className="flex flex-wrap justify-center items-center lg:justify-start lg:items-start gap-[3px]">
 								{/* Flecha visible solo en pantallas grandes */}
-								<span className="text-[30px] text-lime-600 p-5 h-[400px] w-[300px] flex transition duration-300 flex-col justify-center items-center hidden lg:flex">
+								<span className="text-[30px] text-lime-600 p-5 h-[400px] w-[300px] flex transition duration-300 flex-col justify-center items-center hidden lg:flex	">
 									⭢
 								</span>
 								{projects.map((project) => (
 									<Link
 										to={project.url}
+										target="blanck"
 										className="hover:text-lime-600 p-5 bg-zinc-800 hover:bg-zinc-900 text-black h-[400px] w-[300px] rounded-sm flex transition duration-300 flex-col"
 									>
 										<div className="font-bolddec text-[30px] w-full h-[15%] flex items-center">{project.number}</div>
