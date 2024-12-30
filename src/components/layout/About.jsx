@@ -45,7 +45,7 @@ const About = () => {
 						{/* Content Section */}
 						<div className="flex w-full items-center flex-col lg:flex-row">
 							<div className="flex flex-col lg:flex-row md:w-[50%] lg:w-[50%] min-h-[30vh] items-center justify-center lg:justify-start">
-								<h1 className="text-[50px] font-bolddec text-zinc-800">
+								<h1 className="text-[50px] font-bolddec text-white">
 									A little spend <span className="font-flory text-lime-600 text-[60px]">time</span>
 								</h1>
 							</div>

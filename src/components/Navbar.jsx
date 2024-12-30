@@ -1,76 +1,95 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BtnAnimation } from '../MotionAnimation/AppMotion';
 
 const Navbar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-	const toggleSidebar = () => {
-		setIsSidebarOpen(!isSidebarOpen);
+	// Function to handle the delay when closing the sidebar
+	const handleLinkClick = () => {
+		// Add a delay before closing the sidebar
+		setTimeout(() => {
+			setIsSidebarOpen(false);
+		}, 300); // Delay of 300ms before closing the sidebar
 	};
 
 	return (
 		<div className="relative">
 			{/* Hamburger Button */}
 			<button
-				onClick={toggleSidebar}
+				onClick={() => setIsSidebarOpen(!isSidebarOpen)}
 				className="fixed top-4 left-4 z-50 flex ml-[12px] md:ml-[35px] lg:ml-[147px] mt-[40px] flex-col items-start space-y-1 group gap-5"
 			>
 				{/* Top Line */}
-				<span className="w-[60px] h-[10px] bg-white rounded-sm group-hover:bg-lime-600 transition-all"></span>
+				<span className="w-[60px] h-[10px] bg-lime-600 rounded-sm transition-all group-hover:w-[110px]"></span>
+
 				{/* Bottom Line */}
-				<span className="w-[40px] h-[10px] bg-white rounded-sm group-hover:bg-lime-600 transition-all"></span>
+				<span className="w-[40px] h-[10px] bg-lime-600 rounded-sm transition-all group-hover:w-[60px]"></span>
 			</button>
 
 			{/* Sidebar */}
 			<div
 				className={`fixed top-0 left-0 h-full w-full bg-zinc-950 shadow-md transition-transform transform ${
 					isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-				} z-50`}
+				} z-50 transition-all duration-500 delay-100`} // Add delay to the transition
 			>
-				<div className="px-10 lg:px-[8rem] flex flex-col w-full h-full gap-10 lg:gap-0 ">
-					<div className="w-full flex justify-end mt-10">
-						<button onClick={toggleSidebar} className="text-zinc-800 font-bolddec text-[60px] hover:text-lime-600">
-							✕
-						</button>
-					</div>
+				<div className="px-10 py-[100px] lg:px-[8rem] flex flex-col w-full h-full gap-10 lg:gap-0 ">
 					{/* Sidebar Content */}
 					<div className="w-full lg:w-[70%]">
 						<nav className="flex flex-col space-y-4 h-full w-full justify-center gap-5">
-							<div className="w-full h-[50px] flex items-center">
-								<Link to="*" className="font-flory text-lime-600 text-[35px] md:text-[60px] lg:text-[70px]" onClick={toggleSidebar}>
+							<div className="w-full h-[50px] flex items-center justify-between">
+								<Link
+									to="*"
+									className="font-flory text-lime-600 text-[35px] md:text-[60px] lg:text-[70px]"
+									onClick={handleLinkClick} // Use the handleLinkClick with delay
+								>
 									YZS
 								</Link>
+								<BtnAnimation>
+									<button onClick={() => setIsSidebarOpen(false)} className="flex flex-col items-center justify-center space-y-1 group gap-5">
+										{/* Línea superior */}
+										<span className="w-[60px] h-[10px] bg-lime-600 rounded-sm transition-all group-hover:w-[80px]"></span>
+									</button>
+								</BtnAnimation>
 							</div>
 							<hr className="w-full h-[1px] border-0 bg-zinc-800" />
 							<div className="flex flex-col gap-3">
-								<Link
-									to="/AppSalas/"
-									onClick={toggleSidebar}
-									className="text-zinc-800 hover:text-lime-600 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] "
-								>
-									Home
-								</Link>
-								<Link
-									to="/AppSalas/aboutme/"
-									onClick={toggleSidebar}
-									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 "
-								>
-									About Me
-								</Link>
-								<Link
-									to="/AppSalas/myproyects"
-									onClick={toggleSidebar}
-									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600"
-								>
-									Portafolio
-								</Link>
-								<Link
-									to="/AppSalas/contactme"
-									onClick={toggleSidebar}
-									className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600"
-								>
-									Contact
-								</Link>
+								<BtnAnimation>
+									<Link
+										to="/AppSalas/"
+										onClick={handleLinkClick} // Use the handleLinkClick with delay
+										className="text-zinc-800 hover:text-lime-600 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] transition-colors duration-300"
+									>
+										Home
+									</Link>
+								</BtnAnimation>
+								<BtnAnimation>
+									<Link
+										to="/AppSalas/aboutme/"
+										onClick={handleLinkClick} // Use the handleLinkClick with delay
+										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
+									>
+										About Me
+									</Link>
+								</BtnAnimation>
+								<BtnAnimation>
+									<Link
+										to="/AppSalas/myproyects"
+										onClick={handleLinkClick} // Use the handleLinkClick with delay
+										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
+									>
+										Portafolio
+									</Link>
+								</BtnAnimation>
+								<BtnAnimation>
+									<Link
+										to="/AppSalas/contactme"
+										onClick={handleLinkClick} // Use the handleLinkClick with delay
+										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
+									>
+										Contact
+									</Link>
+								</BtnAnimation>
 							</div>
 						</nav>
 					</div>
@@ -81,7 +100,7 @@ const Navbar = () => {
 			</div>
 
 			{/* Overlay */}
-			{isSidebarOpen && <div onClick={toggleSidebar} className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>}
+			{isSidebarOpen && <div onClick={() => setIsSidebarOpen(false)} className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>}
 		</div>
 	);
 };

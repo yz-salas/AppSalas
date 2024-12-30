@@ -45,7 +45,7 @@ const Project = () => {
 								{projects.map((project) => (
 									<Link
 										to={project.url}
-										className="hover:text-lime-600 p-5 bg-zinc-800 hover:bg-zinc-900 text-black h-[400px] w-[300px] flex transition duration-300 flex-col"
+										className="hover:text-lime-600 p-5 bg-zinc-800 hover:bg-zinc-900 text-black h-[400px] w-[300px] rounded-sm flex transition duration-300 flex-col"
 									>
 										<div className="font-bolddec text-[30px] w-full h-[15%] flex items-center">{project.number}</div>
 										<div className="w-full h-[80%] flex justify-center flex-col">

@@ -114,7 +114,7 @@ export const HeaderAnimation = ({ children }) => {
 	};
 
 	return (
-		<motion.div variants={headerVariants} initial="hidden" animate="visible" className='lg:container'>
+		<motion.div variants={headerVariants} initial="hidden" animate="visible" className="lg:container">
 			{children}
 		</motion.div>
 	);
@@ -215,4 +215,14 @@ const shape = {
 	strokeWidth: 10,
 	strokeLinecap: 'round',
 	fill: 'transparent',
+};
+
+// -----------------------------------------------------
+
+export const BtnAnimation = ({ children }) => {
+	return (
+		<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+			{children}
+		</motion.div>
+	);
 };
