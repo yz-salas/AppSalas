@@ -114,7 +114,7 @@ export const HeaderAnimation = ({ children }) => {
 	};
 
 	return (
-		<motion.div variants={headerVariants} initial="hidden" animate="visible">
+		<motion.div variants={headerVariants} initial="hidden" animate="visible" className='lg:container'>
 			{children}
 		</motion.div>
 	);

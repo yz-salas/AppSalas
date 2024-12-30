@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { DragConstraints } from '../../MotionAnimation/AppMotion';
 const Footer = () => {
 	return (
-		<footer className="lg:container bg-black text-white py-12 min-h-[100vh]">
+		<footer className=" bg-black text-white py-12 min-h-[100vh] p-10">
 			<div className="min-h-[100%] flex gap-10 flex-col lg:flex-row justify-center items-center lg:items-center lg:justify-start">
 				<div className="flex items-center justify-center gap-6 lg:h-[100%] min-h-[80vh] w-[75%] lg:w-[50%] flex-col lg:border-r-[2px] lg:border-b-0 border-b-[2px]  border-zinc-800">
 					{/* Header content */}

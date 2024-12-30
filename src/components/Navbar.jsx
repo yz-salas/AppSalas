@@ -13,12 +13,12 @@ const Navbar = () => {
 			{/* Hamburger Button */}
 			<button
 				onClick={toggleSidebar}
-				className="fixed top-4 left-4 z-50 flex ml-[40px] md:ml-[90px] lg:ml-[115px] mt-[20px] flex-col items-start space-y-1 group gap-5"
+				className="fixed top-4 left-4 z-50 flex ml-[12px] md:ml-[35px] lg:ml-[147px] mt-[40px] flex-col items-start space-y-1 group gap-5"
 			>
 				{/* Top Line */}
-				<span className="w-[60px] h-[2px] bg-white rounded-lg group-hover:bg-lime-600 transition-all"></span>
+				<span className="w-[60px] h-[10px] bg-white rounded-sm group-hover:bg-lime-600 transition-all"></span>
 				{/* Bottom Line */}
-				<span className="w-[40px] h-[3px] bg-white rounded-lg group-hover:bg-lime-600 transition-all"></span>
+				<span className="w-[40px] h-[10px] bg-white rounded-sm group-hover:bg-lime-600 transition-all"></span>
 			</button>
 
 			{/* Sidebar */}
@@ -27,7 +27,7 @@ const Navbar = () => {
 					isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
 				} z-50`}
 			>
-				<div className="lg:container flex flex-col w-full h-full px-10 gap-10 lg:gap-0 ">
+				<div className="px-10 lg:px-[8rem] flex flex-col w-full h-full gap-10 lg:gap-0 ">
 					<div className="w-full flex justify-end mt-10">
 						<button onClick={toggleSidebar} className="text-zinc-800 font-bolddec text-[60px] hover:text-lime-600">
 							✕

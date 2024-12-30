@@ -5,31 +5,40 @@ const Contact = () => {
 	return (
 		<>
 			<HeaderAnimation>
-				<div className="font-light" id="header">
-					<div className="bg-zinc-950">
-						<div className="flex flex-col mt-10">
-							<h1 className="text-5xl text-red-700 p-10">
-								Contact Me<span className="text-white">.</span>
-							</h1>
+				<div className="font-light py-20 min-h-screen flex justify-center items-center" id="header">
+					<div className=" bg-zinc-950 flex justify-center flex-col lg:flex-row lg:p-auto">
+						<div className="lg:w-[50%] w-full h-full text-white">
+							<div className="flex flex-col lg:flex-row w-full min-h-[30vh] justify-center lg:items-center lg:justify-start">
+								<h1 className="text-[50px] lg:text-[70px] font-bolddec text-white">
+									Contact <span className="font-flory text-lime-600 text-[70px]">Me</span>
+								</h1>
+							</div>
+							<p className="mb-6 ">
+								Use our contact form for all information requests or contact us directly using the contact information below. All information is
+								treated with complete confidentiality and in accordance with our{' '}
+								<a href="#" className="text-lime-600 hover:underline">
+									data protection statement
+								</a>
+								.
+							</p>
+							<p className=" mb-2">Feel free to get in touch with us via email or phone:</p>
+							<p className="text-lime-600 font-medium">info@neoverv.com</p>
+							<p className="text-lime-600 font-medium">+829-442-1503</p>
 						</div>
-						<div className="md:px-32 lg:px-32">
-							<form className="p-4 rounded-lg">
-								<input
-									type="text"
-									placeholder="Name"
-									className="w-full mb-4 p-2 border border-gray-600 rounded bg-zinc-950 text-white focus:border-white focus:outline-none focus:ring-2"
-								/>
+						<div className="lg:w-[50%] w-full">
+							<form className="lg:p-4 py-10">
+								<input type="text" placeholder="Name" className="w-full mb-4 p-2 font-flory bg-zinc-800 rounded text-lime-600 focus:outline-none " />
 								<input
 									type="email"
 									placeholder="Email"
-									className="w-full mb-4 p-2 border border-gray-600 rounded bg-zinc-950 text-white focus:border-white focus:outline-none focus:ring-2"
+									className="w-full mb-4 p-2 font-flory bg-zinc-800 rounded text-lime-600 focus:outline-none "
 								/>
 								<textarea
 									placeholder="Message"
-									className="w-full mb-4 p-2 border border-gray-600 rounded bg-zinc-950 text-white focus:border-white focus:outline-none focus:ring-2 min-h-[50vh]"
+									className="w-full mb-4 p-2 font-flory rounded bg-zinc-800 text-lime-600 focus:outline-none  min-h-[50vh]"
 									rows="4"
 								></textarea>
-								<button className="bg-red-700 text-white py-2 px-4 rounded">Send Message</button>
+								<button className="bg-zinc-800 hover:bg-zinc-900 text-lime-600 py-2 px-4 rounded">Send Message</button>
 							</form>
 						</div>
 					</div>

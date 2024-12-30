@@ -9,7 +9,7 @@ export default {
 			},
 			container: {
 				center: true, // Asegura que siempre esté centrado
-				padding: '8rem', // Padding adicional
+				padding: '10rem', // Padding adicional
 			},
 		},
 	},
