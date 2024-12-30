@@ -20,6 +20,14 @@ const projects = [
 		number: '02',
 		url: 'https://delfinespark.com/src/main.php',
 	},
+	{
+		id: 3,
+		title: 'Your Images',
+		subtitle:
+			'This small website shows my ability to consume apis and display its data on the screen, it is developed in html, css, javasctipt, tailwind.css, and react.js shows images of an API when you click a button, they are added 1 by 1 and all images are deleted when you touch the secondary button',
+		number: '03',
+		url: 'https://github.com/yz-salas/AppSalas',
+	},
 ];
 
 const Project = () => {
