@@ -9,7 +9,7 @@ export default defineConfig({
 			'@assets': '/src/assets', // Alias para acceder a la carpeta 'assets'
 		},
 	},
-	base: '/AppSalas/', // Reemplaza con el nombre de tu repositorio
+	base: './', // Reemplaza con el nombre de tu repositorio
 	build: {
 		outDir: 'dist',
 	},
