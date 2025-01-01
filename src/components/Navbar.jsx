@@ -56,7 +56,7 @@ const Navbar = () => {
 							<div className="flex flex-col gap-3">
 								<BtnAnimation>
 									<Link
-										to="./"
+										to="/AppSalas/"
 										onClick={handleLinkClick} // Use the handleLinkClick with delay
 										className="text-zinc-800 hover:text-lime-600 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] transition-colors duration-300"
 									>
@@ -65,7 +65,7 @@ const Navbar = () => {
 								</BtnAnimation>
 								<BtnAnimation>
 									<Link
-										to="./aboutme/"
+										to="/AppSalas/aboutme/"
 										onClick={handleLinkClick} // Use the handleLinkClick with delay
 										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
 									>
@@ -74,7 +74,7 @@ const Navbar = () => {
 								</BtnAnimation>
 								<BtnAnimation>
 									<Link
-										to="./myproyects"
+										to="/AppSalas/myproyects"
 										onClick={handleLinkClick} // Use the handleLinkClick with delay
 										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
 									>
@@ -83,7 +83,7 @@ const Navbar = () => {
 								</BtnAnimation>
 								<BtnAnimation>
 									<Link
-										to="./contactme"
+										to="/AppSalas/contactme"
 										onClick={handleLinkClick} // Use the handleLinkClick with delay
 										className="text-zinc-800 font-bolddec text-[35px] md:text-[60px] lg:text-[70px] w-full lg:w-[70%] hover:text-lime-600 transition-colors duration-300"
 									>
