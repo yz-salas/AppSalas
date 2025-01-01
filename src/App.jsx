@@ -18,24 +18,14 @@ function App() {
 		setIsOpen(false);
 	};
 
-	/* controladores del navbar */
-	const links = [
-		{ url: '/AppSalas/', name: 'HOME' },
-		{ url: '/AppSalas/aboutme', name: 'ABOUT ME' },
-		{ url: '/AppSalas/myproyects', name: 'PORTAFOLIO' },
-		{ url: '/AppSalas/contactme', name: 'CONTACT' },
-	];
-
 	return (
 		<>
 			<AppMotion />
 			<main className="container flex-1 flex flex-col px-6 bg-zinc-950 lg:px-0">
-				<div>
-					<NavbarAnimation>
-						<Navbar />
-					</NavbarAnimation>
-					<Router />
-				</div>
+				<NavbarAnimation>
+					<Navbar />
+				</NavbarAnimation>
+				<Router />
 			</main>
 			<Footer />
 		</>
