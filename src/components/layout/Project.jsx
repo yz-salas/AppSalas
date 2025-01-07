@@ -39,7 +39,7 @@ const projects = [
 		id: 5,
 		title: 'Rick And Morty',
 		subtitle: 'By consuming an API, this website shows images of characters from the famous television show called Rick and Morty.',
-		number: '04',
+		number: '05',
 		url: 'https://github.com/yz-salas/app_personajes',
 	},
 ];
@@ -47,23 +47,22 @@ const projects = [
 const Project = () => {
 	return (
 		<HeaderAnimation>
-			<div className="py-[125px] flex flex-col text-white min-h-screen" id="header">
-				<header className=" relative overflow-hidden flex flex-col gap-10">
+			<div className="flex flex-col text-white min-h-screen" id="header">
+				<header className="text-white min-h-[100vh] flex items-center gap-10 w-full">
+					<h1 id="about" className="text-[50px] lg:text-[130px] font-bolddec font-thin text-zinc-800">
+						my<span className="text-lime-600"> project</span>
+					</h1>
+				</header>
+
+				<section className="relative overflow-hidden flex flex-col gap-10">
 					<div className="flex flex-col lg:flex-row lg:items-center w-full min-h-[30vh] pl-[28px] lg:p-0 justify-center lg:justify-start">
-						<h1 className="text-[50px] lg:text-[70px] font-bolddec text-white">
-							My <span className="text-lime-600 font-flory text-[70px]">Projects</span>
+						<h1 className="text-[50px] lg:text-[90px] font-flory text-white">
+						some of my<span className="text-lime-600"> projects</span>
 						</h1>
-					</div>
-					<div className="pl-[29px] lg:p-0 w-full">
-						<hr className="lg:w-[60%] h-[1px] border-0 bg-zinc-800" />
 					</div>
 					<div className="w-full flex py-[40px]">
 						<div className="flex items-center justify-center lg:justify-start lg:items-start w-full">
 							<div className="flex flex-wrap justify-center items-center lg:justify-start lg:items-start gap-[3px]">
-								{/* Flecha visible solo en pantallas grandes */}
-								<span className="text-[30px] text-lime-600 p-5 h-[400px] w-[300px] flex transition duration-300 flex-col justify-center items-center hidden lg:flex	">
-									⭢
-								</span>
 								{projects.map((project) => (
 									<Link
 										to={project.url}
@@ -73,14 +72,14 @@ const Project = () => {
 										<div className="font-bolddec text-[30px] w-full h-[15%] flex items-center">{project.number}</div>
 										<div className="w-full h-[80%] flex justify-center flex-col">
 											<h1 className="text-[30px] font-flory"> {project.title}</h1>
-											<p className="text-[15px] font-light">{project.subtitle}</p>
+											<p className="text-[15px] font-ibm-plex">{project.subtitle}</p>
 										</div>
 									</Link>
 								))}
 							</div>
 						</div>
 					</div>
-				</header>
+				</section>
 			</div>
 		</HeaderAnimation>
 	);

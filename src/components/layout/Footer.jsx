@@ -7,8 +7,8 @@ const Footer = () => {
 				<div className="flex items-center justify-center gap-6 lg:h-[100%] min-h-[80vh] w-[75%] lg:w-[50%] flex-col lg:border-r-[2px] lg:border-b-0 border-b-[2px]  border-zinc-800">
 					{/* Header content */}
 					<div className="flex flex-col lg:flex-row w-full min-h-[30vh] items-center justify-center lg:justify-start">
-						<h1 className="text-[30px] md:text-[40px] lg:text-[70px] font-bolddec w-full">
-							Connect With <span className="font-flory text-lime-600 text-[70px]">Me</span>
+						<h1 className="text-[30px] md:text-[40px] lg:text-[50px] font-bolddec w-full">
+							connect.with<span className="text-lime-600 "> me</span>
 						</h1>
 					</div>
 					{/* Navigation with submenus */}

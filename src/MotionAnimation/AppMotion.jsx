@@ -96,7 +96,7 @@ export const NavbarAnimation = ({ children }) => {
 	);
 };
 
-export const HeaderAnimation = ({ children }) => {
+export const HeaderAnimation = ({ children, delay = 0.8 }) => {
 	const headerVariants = {
 		hidden: {
 			y: 70, // Empieza más abajo
@@ -108,7 +108,7 @@ export const HeaderAnimation = ({ children }) => {
 			transition: {
 				duration: 0.2, // Duración de la animación
 				ease: 'easeInOut', // Efecto suave
-				delay: 0.3, // Espera a que termine la animación del navbar
+				delay: delay, // Configurable desde props
 			},
 		},
 	};
@@ -221,7 +221,7 @@ const shape = {
 
 export const BtnAnimation = ({ children }) => {
 	return (
-		<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+		<motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.95 }}>
 			{children}
 		</motion.div>
 	);
